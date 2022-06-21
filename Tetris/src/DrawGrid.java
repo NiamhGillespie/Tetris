@@ -10,10 +10,4 @@ public class DrawGrid extends JPanel{
 		  for ( int y = 0; y <= Board.numberOfSquares * 20; y += 20 ) 
 			 graphics.drawRect(x, y, 20, 20);
 	}
-
-//	  public static void main(String[] args) {
-//	    JPanel grid = new DrawGrid();
-//	    grid.setBounds(100, 100,Board.numberOfSquares * 20 + 200,Board.numberOfSquares * 20 + 200);
-//	    TetrisSetup.tetrisFrame.add(grid);
-//	  }
 }
