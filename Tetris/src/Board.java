@@ -9,6 +9,7 @@ import javax.swing.JLabel;
 public class Board {
 	
 	public static int numberOfSquares;
+	public int[][] board;
 	
 	protected void createBoard(BoardSizes boardSize) {
 		// creates a playing board of the given diameter - think about how to implement this
@@ -20,7 +21,16 @@ public class Board {
 		numberOfSquares = boardDimensions[2];
 		
 		
-
+		board = new int[width/10][height/10];
+		
+		// will print out board :)
+		for (int[] each: board) {
+			for (int all : each) {
+				System.out.print(all + ", ");
+			}
+			System.out.println("");
+		}
+		
 		TetrisSetup.tetrisFrame.getContentPane().removeAll();
 		TetrisSetup.tetrisFrame.repaint();
 		TetrisSetup.tetrisFrame.setSize(width * 2 + 100,  height * 2 + 150);
